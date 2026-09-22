@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRẦN MINH TRỌNG - Thông tin liên hệ</title>
+    <meta name="description" content="Tìm hiểu thông tin cá nhân, học tập,
+     kỹ năng và sở thích của Trần Minh Trọng, sinh viên Công nghệ thông tin.">
+  <link rel="stylesheet" href="style.css">
+    <title>Form liên hệ</title>
+</head>
+
+<body>
+
+    <h1>Form liên hệ</h1>
+    <nav>                                <!-- Phần điều hướng-->
+
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <a href="contact.html">Liên hệ</a>
+
+    <a href="https://github.com/yourusername/your-repo"            
+       target="_blank"                         
+       rel="noopener">                         
+        GitHub
+    </a>
+        </nav>
+
+    <form action="#" method="post">
+
+        <!-- FIELDSET 1 -->
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+
+            <!-- Họ và tên -->
+            <label for="hoten">Họ và tên:</label>
+            <input
+                type="text"
+                id="hoten"
+                name="hoten"
+                required
+                minlength="2"
+            >
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
+            <br><br>
+
+            <!-- Điện thoại -->
+            <label for="dienthoai">Điện thoại:</label>
+            <input
+                type="tel"
+                id="dienthoai"
+                name="dienthoai"
+                pattern="[0-9]{10,11}"
+            >
+            <br><br>
+
+            <!-- Ngày sinh - nâng cao -->
+            <label for="ngaysinh">Ngày sinh:</label>
+            <input
+                type="date"
+                id="ngaysinh"
+                name="ngaysinh"
+            >
+            <br><br>
+
+            <!-- Đại học - nâng cao -->
+            <label for="daihoc">Trường đại học:</label>
+
+            <input
+                list="truongdaihoc"
+                id="daihoc"
+                name="daihoc"
+            >
+
+            <datalist id="truongdaihoc">
+                <option value="Đại học Gia Định">
+                <option value="Đại học Công nghệ TP.HCM">
+                <option value="Đại học Kinh tế TP.HCM">
+                <option value="Đại học Công nghiệp TP.HCM">
+            </datalist>
+
+        </fieldset>
+
+        <br>
+
+        <!-- FIELDSET 2 -->
+        <fieldset>
+
+            <legend>Nội dung liên hệ</legend>
+
+            <!-- Kênh liên hệ -->
+            <p>Kênh liên hệ:</p>
+
+            <input
+                type="radio"
+                id="emailChannel"
+                name="kenhlienhe"
+                value="email"
+                required
+            >
+            <label for="emailChannel">Email</label>
+
+            <input
+                type="radio"
+                id="phoneChannel"
+                name="kenhlienhe"
+                value="phone"
+            >
+            <label for="phoneChannel">Phone</label>
+
+            <input
+                type="radio"
+                id="zaloChannel"
+                name="kenhlienhe"
+                value="zalo"
+            >
+            <label for="zaloChannel">Zalo</label>
+
+            <br><br>
+
+            <!-- Nội dung -->
+            <label for="noidung">Nội dung:</label>
+            <br>
+
+            <textarea
+                id="noidung"
+                name="noidung"
+                rows="5"
+                required
+                minlength="10"
+            ></textarea>
+
+            <br><br>
+
+            <!-- Đồng ý -->
+            <input
+                type="checkbox"
+                id="dongy"
+                name="dongy"
+                required
+            >
+
+            <label for="dongy">
+                Tôi đồng ý với điều khoản
+            </label>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Nút -->
+        <button type="submit">Gửi</button>
+
+        <button type="reset">Xóa</button>
+
+    </form>
+
+</body>
+</html>
