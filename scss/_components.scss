@@ -1,0 +1,145 @@
+@use 'variables' as *;
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin card-style() {
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: $radius;
+    box-shadow: $shadow;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 32px;
+
+    background: $color-primary;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #93c5fd;
+    margin-left: 24px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    @include flex-center(column);
+
+    min-height: 300px;
+
+    background: $color-secondary;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 24px;
+}
+
+
+/* BUTTON */
+
+.btn-primary {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background: white;
+
+    color: navy;
+
+    text-decoration: none;
+
+    border-radius: $radius;
+
+    font-weight: 600;
+}
+
+
+/* SKILL CARD */
+
+.skill-card {
+    @include card-style();
+}
+
+.skill-card h3 {
+    margin-top: 0;
+    color: $color-primary;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    background: #f1f5f9;
+
+    padding: $spacing;
+
+    border-radius: $radius;
+
+    align-self: start;
+}
+
+.sidebar a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: $spacing 32px;
+
+    background: $color-primary;
+
+    color: white;
+}
+
+footer a {
+    color: #93c5fd;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+}

@@ -1,0 +1,87 @@
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .page-layout {
+        display: block;
+        padding: 20px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) {
+
+    .page-layout {
+        display: grid;
+
+        grid-template-columns: 220px 1fr;
+
+        gap: 32px;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1024px) {
+
+    .page-layout {
+        grid-template-columns: 240px 1fr;
+    }
+}
+
+
+/* =========================
+   LANDSCAPE
+========================= */
+
+@media (orientation: landscape) and (max-width: 767px) {
+
+    .hero {
+        min-height: 220px;
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
